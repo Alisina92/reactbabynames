@@ -8,20 +8,31 @@ const BabyNamesData =(props)=>{
      })
      
      
-     return(<div className ='row col-12' style={{color:'yellow'}}  >
-
-      {sortedArr.map((element,index)=>{
-          return (
-              
-              <div key= {index}  className ='container' style={element.sex==='m'?{backgroundColor:'blue'}:{backgroundColor:'red'}}>
-             {element.name}
-          </div>
-        );
+     return (
+       <div className="row col-12" style={{ color: "white" }}>
         
-    })}
-      
+         
+          
+         {sortedArr.map((element, index) => {
+           return (
+             <div
+               key={index}
+               className="container"
+               style={
+                 element.sex === "m"
+                   ? { backgroundColor: "blue" }
+                   : { backgroundColor: "red" }
+               }
+             > 
+            
+               {element.name}
+             </div>
+           );
+         })}
 
-    </div>)
+         
+       </div>
+     );
 }
 
 export default BabyNamesData;
