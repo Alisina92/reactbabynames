@@ -10,7 +10,7 @@ import './Grid.css';
 const App =()=> {
   const [searchTerm, setSearchTerm] = useState(babysData);
  
-  const changeHandler = (event ) => {
+  const changeHandler = (event) => {
       console.log('change')
       const result = babysData.filter((element) => {
        return element.name.toLowerCase().includes(event.target.value.toLowerCase());
